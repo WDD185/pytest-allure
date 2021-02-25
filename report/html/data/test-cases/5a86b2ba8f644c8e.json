@@ -1,0 +1,123 @@
+{
+  "uid" : "5a86b2ba8f644c8e",
+  "name" : "test_02[w1-w2]",
+  "fullName" : "testcase.jyy_app.test_jyyapp.TestLogin#test_02",
+  "historyId" : "b1121b7f03d98e268f168cce39d250ce",
+  "time" : {
+    "start" : 1614243278352,
+    "stop" : 1614243278352,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "all_fixture",
+    "time" : {
+      "start" : 1614243278352,
+      "stop" : 1614243278352,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "app_fixture",
+    "time" : {
+      "start" : 1614243278352,
+      "stop" : 1614243278352,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "all_fixture::0",
+    "time" : {
+      "start" : 1614243278353,
+      "stop" : 1614243278353,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "app_fixture::0",
+    "time" : {
+      "start" : 1614243278352,
+      "stop" : 1614243278353,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase.jyy_app"
+  }, {
+    "name" : "suite",
+    "value" : "test_jyyapp"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-VL1UG1D"
+  }, {
+    "name" : "thread",
+    "value" : "1872-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.jyy_app.test_jyyapp"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "all_fixture",
+    "value" : "'王1'"
+  }, {
+    "name" : "app_fixture",
+    "value" : "'王2'"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "run(order=1)" ]
+  },
+  "source" : "5a86b2ba8f644c8e.json",
+  "parameterValues" : [ "'王1'", "'王2'" ]
+}
