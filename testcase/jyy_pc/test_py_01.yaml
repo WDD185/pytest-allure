@@ -1,3 +1,15 @@
-msxy:
-  name: 王哥
-  age: 18
+-
+    name: 获得token的接口 #横线表示数组，大括号表示对象
+    requests:
+      url: https://geek.jkwljy.com/service-user/auth/employee
+      method: post
+      headers:
+          content-Type: application/json;charset=UTF-8
+      params:
+       type: employee,
+       identityType: 1,
+       ip: 0.0.0.0,
+       account: 15244919753,
+       password: 88888888,
+       assistant: false
+

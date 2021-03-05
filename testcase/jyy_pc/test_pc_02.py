@@ -3,6 +3,8 @@ import pytest
 
 class TestApi:
 
-    @pytest.mark.parametrize('name', param=['王1', '王2'])
-    def test_go(self, name):
-        print(name)
+    @pytest.mark.parametrize('name, age', [['王1', '18'], ['王2', '20']])
+    def test_go(self, name, age):
+        print(name, age)
+
+

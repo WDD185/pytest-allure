@@ -1,4 +1,5 @@
 import pytest
+import requests
 
 
 class TestLogin:
@@ -24,7 +25,10 @@ class TestLogin:
     # @pytest.mark.skip(reason='跳过该用例')  # 将用例标记为跳过
     @pytest.mark.run(order=1)
     def test_04(self, pc_fixture):
-        print('hello')
+        url = 'https://www.baidu.com'
+        params = {'wd': '刘翔'}
+        res = requests.get(url, params=params)
+        print(res.text)
 
     @pytest.mark.run(order=4)
     def test_05(self):
