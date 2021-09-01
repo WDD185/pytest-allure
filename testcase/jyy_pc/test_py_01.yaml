@@ -12,4 +12,5 @@
        account: 15244919753,
        password: 88888888,
        assistant: false
-
+  validate:
+    -
