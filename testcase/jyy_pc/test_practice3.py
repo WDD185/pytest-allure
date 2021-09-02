@@ -1,5 +1,6 @@
 import random
 import time
+import copy
 
 
 def draw_a_circle():
@@ -52,3 +53,13 @@ b_list = [x + 100 for x in b if x % 2 == 0]
 print(b_list)
 
 c_list = []
+
+num1 = [10, [12, 29]]
+num2 = num1.copy()  # 通过copy函数把数据复制给num2，但是是不同的内存空间,但是内存空间中存的内存空间还是一样的，这是是浅拷贝
+num3 = copy.deepcopy(num1)  # 通过copy中的deepcopy方法可以让内存空间中的内存空间也不一样，可以完全独立，这是深拷贝
+num1.append(5)
+num1[1].append(90)
+num1[0] = 8
+print(id(num1), num1)
+print(id(num2), num2)
+print(id(num3), num3)
