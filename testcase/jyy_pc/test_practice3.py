@@ -63,3 +63,24 @@ num1[0] = 8
 print(id(num1), num1)
 print(id(num2), num2)
 print(id(num3), num3)
+
+context = [
+        {
+            'name': '三国演义',
+            'author': '罗贯中',
+            'price': 120
+        },
+        {
+            'name': '西游记',
+            'author': '吴承恩',
+            'price': 100
+        },
+        {
+            'name': '红楼梦',
+            'author': '曹雪芹',
+            'price': 90
+        }]
+
+for x in context:
+    for y in x:
+        print(x[y])
