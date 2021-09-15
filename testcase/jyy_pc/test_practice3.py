@@ -65,22 +65,46 @@ print(id(num2), num2)
 print(id(num3), num3)
 
 context = [
-        {
-            'name': '三国演义',
-            'author': '罗贯中',
-            'price': 120
-        },
-        {
-            'name': '西游记',
-            'author': '吴承恩',
-            'price': 100
-        },
-        {
-            'name': '红楼梦',
-            'author': '曹雪芹',
-            'price': 90
-        }]
+    {
+        'name': '三国演义',
+        'author': '罗贯中',
+        'price': 120
+    },
+    {
+        'name': '西游记',
+        'author': '吴承恩',
+        'price': 100
+    },
+    {
+        'name': '红楼梦',
+        'author': '曹雪芹',
+        'price': 90
+    }]
 
 for x in context:
     for y in x:
         print(x[y])
+
+L = [('Bob', 75), ('adam', 92), ('bart', 66), ('Lisa', 88)]
+
+print(sorted(L, key=lambda L: L[0].capitalize()))
+
+L1 = [('Bob', 75), ('adam', 92), ('bart', 66), ('Lisa', 88)]
+
+
+def by_name(t):
+    return t[0].capitalize()
+
+
+print(sorted(L, key=by_name))
+
+
+def count(func):
+    start_time = time.clock()
+    func()
+    end_time = time.clock()
+    count_time = end_time - start_time
+    print('一共用时%d' % count_time)
+
+
+count(test_list_1)

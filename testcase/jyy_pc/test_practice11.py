@@ -1,0 +1,85 @@
+import re
+from datetime import datetime
+from turtle import *
+
+# 设置色彩模式是RGB:
+colormode(255)
+
+lt(90)
+
+lv = 14
+l = 120
+s = 45
+
+width(lv)
+
+# 初始化RGB颜色:
+r = 0
+g = 0
+b = 0
+pencolor(r, g, b)
+
+penup()
+bk(l)
+pendown()
+fd(l)
+
+
+def draw_tree(l, level):
+    global r, g, b
+    # save the current pen width
+    w = width()
+
+    # narrow the pen width
+    width(w * 3.0 / 4.0)
+    # set color:
+    r = r + 1
+    g = g + 2
+    b = b + 3
+    pencolor(r % 200, g % 200, b % 200)
+
+    l = 3.0 / 4.0 * l
+
+    lt(s)
+    fd(l)
+
+    if level < lv:
+        draw_tree(l, level + 1)
+    bk(l)
+    rt(2 * s)
+    fd(l)
+
+    if level < lv:
+        draw_tree(l, level + 1)
+    bk(l)
+    lt(s)
+
+    # restore the previous pen width
+    width(w)
+
+
+speed("fastest")
+
+draw_tree(l, 4)
+
+done()
+
+
+def read():
+    with open('article.txt', 'r', encoding='utf-8') as f:
+        text = f.read()
+        print(text)
+        text1 = re.findall(' *(a[a-z]+) ', text)
+        text1 = set(text1)
+        print(text1)
+
+
+def get_time():
+    now = datetime.now()
+    c_now = now.strftime('%Y-%m-%d %H:%M:%S')
+    print(c_now)
+    print(type(c_now))
+
+
+if __name__ == '__main__':
+    draw_tree()
