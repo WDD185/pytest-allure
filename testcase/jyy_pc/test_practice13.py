@@ -24,10 +24,15 @@ class OpMysql:
 
 def main():
     with OpMysql('172.10.70.171', 3307, 'root', '123456', 'server-user') as f:
-        f.execute('SELECT * FROM user_info')
+        # f.execute(r"insert into user_info(name, age, phone_number)  values ('刘欢', 17, 13878767654)")
+        f.execute(r"select user_info.name from user_info inner join  user_order "
+                  r"on user_info.order_id = user_order.order_id where user_order.order_createtime"
+                  r" between '2021-08-01'and '2021-09-01'")
         find_all = f.fetchall()
+        lst = []
         for x in find_all:
-            print(x)
+            lst.append(x)
+        print(lst)
 
 
 if __name__ == '__main__':

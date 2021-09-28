@@ -1,3 +1,4 @@
+import json
 import random
 import time
 import copy
@@ -55,8 +56,8 @@ print(b_list)
 c_list = []
 
 num1 = [10, [12, 29]]
-num2 = num1.copy()  # 通过copy函数把数据复制给num2，但是是不同的内存空间,但是内存空间中存的内存空间还是一样的，这是是浅拷贝
-num3 = copy.deepcopy(num1)  # 通过copy中的deepcopy方法可以让内存空间中的内存空间也不一样，可以完全独立，这是深拷贝
+num2 = num1.copy()  # 通过copy函数把数据复制给num2，但是是不同的引用地址,但是引用地址中存的内存空间还是一样的，这是是浅拷贝
+num3 = copy.deepcopy(num1)  # 通过copy中的deepcopy方法可以让引用地址中的内存空间也不一样，可以完全独立，这是深拷贝
 num1.append(5)
 num1[1].append(90)
 num1[0] = 8
@@ -89,14 +90,15 @@ L = [('Bob', 75), ('adam', 92), ('bart', 66), ('Lisa', 88)]
 
 print(sorted(L, key=lambda L: L[0].capitalize()))
 
-L1 = [('Bob', 75), ('adam', 92), ('bart', 66), ('Lisa', 88)]
+L1 = {
+    'Bob': 75,
+    'adam': 92,
+    'bart': 66,
+    'Lisa': 88
+}
 
-
-def by_name(t):
-    return t[0].capitalize()
-
-
-print(sorted(L, key=by_name))
+print(sorted(L1.items(), key=lambda d: d[1]))
+print(sorted(L1.items(), key=lambda d: d[0].capitalize()))
 
 
 def count(func):
@@ -107,4 +109,7 @@ def count(func):
     print('一共用时%d' % count_time)
 
 
-count(test_list_1)
+def ret():
+    for i in [1, 2, 3, 4]:
+        i += 1
+        yield i
